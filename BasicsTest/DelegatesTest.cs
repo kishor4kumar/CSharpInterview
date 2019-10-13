@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using Basics;
 
 namespace BasicsTest
 {
@@ -7,6 +8,8 @@ namespace BasicsTest
         [Test]
         public void SimpleDelegateTest()
         {
+            Log log = new Log();
+            log.LogError("Test Logging");
             Assert.Pass();
         }
     }
