@@ -6,7 +6,8 @@ namespace Advanced
     {
         public static void Main(string[] args)
         {
-            BasicThread.RunThreads();
+            LinqBasics linqBasics = new LinqBasics();
+            linqBasics.Top5FilesInADirectory();
             Console.ReadLine();
         }
     }

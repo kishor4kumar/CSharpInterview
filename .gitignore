@@ -5,3 +5,5 @@
 /.vs
 obj
 Bin
+/PrinterInfo/Debug
+/CSharp.VC.db
