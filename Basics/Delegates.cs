@@ -39,7 +39,7 @@ namespace Basics
         private readonly LogErrorDelegate logError;
         public LogErrorDelegate LogError
         {
-            get => logError; 
+            get { return logError; }
             private set { }
         }
 

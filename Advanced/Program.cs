@@ -6,7 +6,9 @@ namespace Advanced
     {
         public static void Main(string[] args)
         {
-            CallingSquence callingSquence = new CallingSquence();
+            LinqBasics linqBasics = new LinqBasics();
+            linqBasics.Top5FilesInADirectory();
+            Console.ReadLine();
         }
     }
 }
