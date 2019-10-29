@@ -20,10 +20,4 @@ namespace Advanced
             }
         }
     }
-
-    //public class Something
-    //{
-    //    public abstract int MakeThings();
-
-    //}
 }

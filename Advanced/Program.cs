@@ -6,9 +6,7 @@ namespace Advanced
     {
         public static void Main(string[] args)
         {
-            LinqBasics linqBasics = new LinqBasics();
-            linqBasics.Top5FilesInADirectory();
-            Console.ReadLine();
+            var events = new EventsMulticast();
         }
     }
 }
