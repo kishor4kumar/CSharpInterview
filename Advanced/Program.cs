@@ -6,8 +6,7 @@ namespace Advanced
     {
         public static void Main(string[] args)
         {
-            BasicThread.RunThreads();
-            Console.ReadLine();
+            CallingSquence callingSquence = new CallingSquence();
         }
     }
 }

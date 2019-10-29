@@ -1,0 +1,6 @@
+﻿namespace Advanced
+{
+    class AsyncAwait
+    {
+    }
+}

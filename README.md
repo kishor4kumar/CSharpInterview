@@ -6,6 +6,14 @@
 
 # Advanced:
 1. Threading
+2. Async and Await
+
+# SOLID Principle
+1. Single Responsibility
+2. Open Close Principle
+3. Liskov Substitution Principle
+4. Interface Segregation Principle
+5. Dependency Inversion Principle
 
 # Naming Convention
 Follow all .NET Framework Design Guidelines for both internal and external members. Highlights of these include:
