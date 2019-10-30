@@ -33,35 +33,76 @@ namespace DesignPatterns.Creational
         }
     }
 
+    interface IButton
+    {
+        void Click();
+        void Render();
+    }
+
+    class WindowsButton : IButton
+    {
+        public void Click()
+        {
+            Console.WriteLine("Windows Click");
+        }
+
+        public void Render()
+        {
+            Console.WriteLine("Windows Render");
+        }
+    }
+
+    class LinuxButton : IButton
+    {
+        public void Click()
+        {
+            Console.WriteLine("Linux Click");
+        }
+
+        public void Render()
+        {
+            Console.WriteLine("Linux Render");
+        }
+    }
+
     interface IFactory
     {
-        void LaunchTextEditor();
+        IButton GetUIButton();
     }
 
     class WindowsFactory : IFactory
     {
-        public void LaunchTextEditor()
+        public IButton GetUIButton()
         {
-            Console.WriteLine("Open Notepad");
+            return new WindowsButton();
         }
     }
 
     class LinuxFactory : IFactory
     {
-        public void LaunchTextEditor()
+        public IButton GetUIButton()
         {
-            Console.WriteLine("Open GNU Text Editor");
+            return new LinuxButton();
         }
     }
 
     class ClientApplication
     {
-        private readonly IFactory factory;
+        private readonly IButton button;
 
         public ClientApplication(IFactory factory)
         {
-            this.factory = factory;
-            factory.LaunchTextEditor();
+            button = factory.GetUIButton();
+        }
+
+        public void DrawUI()
+        {
+            button.Render();
+        }
+
+        public void ClickUI()
+        {
+            button.Click();
         }
     }
 }
