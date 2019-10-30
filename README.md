@@ -15,6 +15,19 @@
 4. Interface Segregation Principle
 5. Dependency Inversion Principle
 
+# Design Patterns
+## Creational
+1. Abstract Factory
+2. Factory
+3. Singleton
+## Structural
+1. Adpater
+2. Bridge
+## Behavioral
+1. Observer
+2. Iterator
+3. Command 
+
 # Naming Convention
 Follow all .NET Framework Design Guidelines for both internal and external members. Highlights of these include:
 1. Do not use Hungarian notation
