@@ -1,62 +1,65 @@
 ﻿using System;
 
-namespace DesignPatterns
+namespace DesignPatterns.Creational
 {
-    class Factory
+    namespace Factory
     {
-        public Factory()
+        class Factory
         {
-            var factory = new UIFactory();
-            var clientApplication = new ClientApplication(factory);
-            clientApplication.DrawUI();
-            clientApplication.ClickUI();
-        }
-    }
-
-    interface IButton
-    {
-        void Click();
-        void Render();
-    }
-
-    class CustomButton : IButton
-    {
-        public void Click()
-        {
-            Console.WriteLine("Custom button Click");
+            public Factory()
+            {
+                var factory = new UIFactory();
+                var clientApplication = new ClientApplication(factory);
+                clientApplication.DrawUI();
+                clientApplication.ClickUI();
+            }
         }
 
-        public void Render()
+        interface IButton
         {
-            Console.WriteLine("Custom button Render");
-        }
-    }
-
-    class UIFactory
-    {
-        public IButton GetUIButton()
-        {
-            return new CustomButton();
-        }
-    }
-
-    class ClientApplication
-    {
-        private readonly IButton button;
-
-        public ClientApplication(UIFactory factory)
-        {
-            button = factory.GetUIButton();
+            void Click();
+            void Render();
         }
 
-        public void DrawUI()
+        class CustomButton : IButton
         {
-            button.Render();
+            public void Click()
+            {
+                Console.WriteLine("Custom button Click");
+            }
+
+            public void Render()
+            {
+                Console.WriteLine("Custom button Render");
+            }
         }
 
-        public void ClickUI()
+        class UIFactory
         {
-            button.Click();
+            public IButton GetUIButton()
+            {
+                return new CustomButton();
+            }
+        }
+
+        class ClientApplication
+        {
+            private readonly IButton button;
+
+            public ClientApplication(UIFactory factory)
+            {
+                button = factory.GetUIButton();
+            }
+
+            public void DrawUI()
+            {
+                button.Render();
+            }
+
+            public void ClickUI()
+            {
+                button.Click();
+            }
         }
     }
 }
