@@ -30,6 +30,8 @@ namespace DesignPatterns.Creational
             }
 
             var clientApplication = new ClientApplication(factory);
+            clientApplication.DrawUI();
+            clientApplication.ClickUI();
         }
     }
 
