@@ -3,8 +3,7 @@ using System.Collections.Generic;
 
 namespace DesignPatterns.Structural
 {
-
-    class MemeLord
+    public class MemeLord
     {
         public MemeLord()
         {
