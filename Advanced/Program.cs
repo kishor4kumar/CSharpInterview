@@ -6,7 +6,7 @@ namespace Advanced
     {
         public static void Main(string[] args)
         {
-            var events = new EventsMulticast();
+            var tasks = new Tasks();
         }
     }
 }
